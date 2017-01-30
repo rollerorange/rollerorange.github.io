@@ -196,7 +196,7 @@ img {
 #navigation {
 	display: inline-block;
 	list-style: none;
-	width: 480px;
+	width: 580px;
 	margin: 30px 0 0;
 	padding: 0;
 }
@@ -207,7 +207,7 @@ img {
 #navigation li a {
 	color: #8c8c8c;
 	font-family: 'Muli-Light';
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 54px;
 	padding: 0;
 	text-decoration: none;

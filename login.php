@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+﻿<!DOCTYPE php>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -7,6 +6,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+    <?php include ('db.php'); ?>
 	<div id="page">
 		<div id="header">
 			<div>
@@ -25,7 +25,7 @@
 						<a href="performance.html">performances</a>
 					</li>
 					<li class="selected">
-						<a href="blog.html">login</a>
+						<a href="login.php">login</a>
 					</li>
 					<li>
 						<a href="contact.html">contact</a>
@@ -35,69 +35,32 @@
 			<span class="shadow"></span>
 		</div>
 		<div id="contact">
-			<form action="index.html" method="post">
-					<h2>Log in</h2>
-					<label>Gebruikersnaam</label>
-					<input type="text" value="" class="txtfield">
-					<label>Wachtwoord</label>
-					<input type="text" value="" class="txtfield">
-					<input type="submit" value="Log In" class="btn">
-				</form>
+        <?php
+        $action=$_REQUEST['action'];
+        if ($action==""){
+        ?>
+        <form  action="" method="POST">
+        <input type="hidden" name="action" value="submit">
+            <h2>Log in</h2>
+            <label>Username:</label>
+            <input name="username" type="text" value=""/><br>
+            <label>Wachtwoord:</label>
+            <input name="wachtwoord" type="password" value=""/><br>
+            <br>
+            <input type="submit" value="Log in" class="btn"/>
+        </form>
+    <?php
+        }else{
+            $name=$_REQUEST['username'];
+            $pass=$_REQUEST['wachtwoord'];
+            if (($name=="")||($pass=="")){
+		        echo "All fields are required, please fill <a href=\"\">the form</a> again.";
+	        }else{
+                echo "test";
+            }
+        }
+        ?>
 		</div>
-		<div id="footer">
-			<span class="shadow"></span>
-			<div id="links">
-				<div>
-					<div>
-						<h3>Categories</h3>
-						<ul>
-							<li>
-								<a href="blog.html">Dance Tips &amp; Tricks</a>
-							</li>
-							<li>
-								<a href="blog.html">Daring Dancer</a>
-							</li>
-							<li>
-								<a href="blog.html">Tip Toes</a>
-							</li>
-							<li>
-								<a href="blog.html">Fashion Feet</a>
-							</li>
-							<li>
-								<a href="blog.html">The Happy Mind For The Happy Feet</a>
-							</li>
-						</ul>
-					</div>
-					<div class="archives">
-						<h3>Archives</h3>
-						<ul>
-							<li>
-								<a href="blog.html">May 2023</a>
-							</li>
-							<li>
-								<a href="blog.html">April 2023</a>
-							</li>
-							<li>
-								<a href="blog.html">March 2023</a>
-							</li>
-							<li>
-								<a href="blog.html">February 2023</a>
-							</li>
-							<li>
-								<a href="blog.html">January 2023</a>
-							</li>
-							<li>
-								<a href="blog.html">December 2023</a>
-							</li>
-						</ul>
-						<form action="index.html" method="post" id="searchbar">
-							<h3>Blog Search</h3>
-							<input type="text" value="">
-							<input type="submit" value="" class="btn">
-						</form>
-					</div>
-				</div>
-			</div>
 			<div>
 				<div class="section">
 					<h5>Navigation Menu</h5>
@@ -115,7 +78,7 @@
 							<a href="performance.html">Performances</a>
 						</li>
 						<li>
-							<a href="blog.html">Login</a>
+							<a href="login.php">Login</a>
 						</li>
 						<li>
 							<a href="contact.html">Contact</a>
@@ -126,13 +89,13 @@
 					<h5>Recent Blog Posts</h5>
 					<ul>
 						<li>
-							<a href="blog.html">Dance Tips &amp; Tricks: How To Know If Modern Dance Is Right For You</a>
+							<a href="login.php">Dance Tips &amp; Tricks: How To Know If Modern Dance Is Right For You</a>
 						</li>
 						<li>
-							<a href="blog.html">Dance Tips &amp; Tricks: The Secrets To A Successful Dancing Career</a>
+							<a href="login.php">Dance Tips &amp; Tricks: The Secrets To A Successful Dancing Career</a>
 						</li>
 						<li>
-							<a href="blog.html">Daring Dancer: Harillsa Gortengkov</a>
+							<a href="login.php">Daring Dancer: Harillsa Gortengkov</a>
 						</li>
 					</ul>
 				</div>
