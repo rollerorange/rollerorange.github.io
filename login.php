@@ -16,13 +16,13 @@
 						<a href="index.html">home</a>
 					</li>
 					<li>
-						<a href="about.html">about</a>
+						<a href="about.html">over</a>
 					</li>
 					<li>
-						<a href="schedules.html">class schedules</a>
+						<a href="schedules.html">openingstijden</a>
 					</li>
 					<li>
-						<a href="performance.html">performances</a>
+						<a href="performance.html">prestatie</a>
 					</li>
 					<li class="selected">
 						<a href="login.php">login</a>
