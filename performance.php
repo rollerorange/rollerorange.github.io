@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+<?php 
+	session_start();
+	echo('<br><br><br><br><br><br><figure>
+			<embed type="image/svg+xml" src="/charts/user'.$_SESSION['ID'].'chart.svg" />
+		</figure>');
+?>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Benno's - Openingstijden</title>
+	<title>Benno's - Performances</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
@@ -18,11 +23,11 @@
 					<li>
 						<a href="about.html">over</a>
 					</li>
-					<li class="selected">
+					<li>
 						<a href="schedules.html">openingstijden</a>
 					</li>
-					<li>
-						<a href="performance.php">prestatie</a>
+					<li class="selected">
+						<a href="performance.html">prestatie</a>
 					</li>
 					<li>
 						<a href="login.php">login</a>
@@ -33,77 +38,6 @@
 				</ul>
 			</div>
 			<span class="shadow"></span>
-		</div>
-		<div id="contents">
-			<div id="schedules">
-				<div id="main">
-					<div class="frame2">
-						<img src="images/jump-curl.jpg" alt="Img">
-					</div>
-					<h2>Vrijdag</h2>
-					<p>
-						Deze en elke andere vrijdag is de sportschool open, ook op elke feestdag.
-					</p>
-					<p>
-						<em>Openingstijden:</em><span class="month">Elke vrijdag</span><span class="time">7:00 - 22:30</span>
-					</p>
-					<a href="vrijdag.html" class="btn">Download Schema</a>
-				</div>
-				<div id="sidebar">
-					<div class="section">
-						<div>
-							<h3>Class Schedules</h3>
-							<ul>
-								<li>
-									<a href="schedules.html">Maandag</a>
-								</li>
-								<li>
-									<a href="Dinsdag.html">Dinsdag</a>
-								</li>
-								<li>
-									<a href="Woensdag.html">Woensdag</a>
-								</li>
-								<li>
-									<a href="Donderdag.html">Donderdag</a>
-								</li>
-								<li class="selected">
-									<a href="Vrijdag.html">Vrijdag</a>
-								</li>
-								<li>
-									<a href="Zaterdag.html">Zaterdag</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div id="contactbox">
-						<div>
-							<div>
-								<h3>Neem contact op</h3>
-								<ul>
-									<li>
-										<span>Adres:</span>
-										<p>
-											Benno's Sportschool<br>Hogeschool Utrecht<br> Utrecht <br><br>
-										</p>
-									</li>
-									<li>
-										<span>Telefoon:</span>
-										<p>
-											069-1337-420
-										</p>
-									</li>
-									<li>
-										<span>Email:</span>
-										<p>
-											<a href="index.html">bennosportschoolsocial@gmail.com<br>
-										</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 		<div id="footer">
 			<span class="shadow"></span>
@@ -121,7 +55,7 @@
 							<a href="schedules.html">Openingstijden</a>
 						</li>
 						<li>
-							<a href="performance.php">Prestatie</a>
+							<a href="performance.html">Prestatie</a>
 						</li>
 						<li>
 							<a href="login.php">Login</a>

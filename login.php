@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE php>
+<?php session_start(); ?>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -22,7 +23,7 @@
 						<a href="schedules.html">openingstijden</a>
 					</li>
 					<li>
-						<a href="performance.html">prestatie</a>
+						<a href="performance.php">prestatie</a>
 					</li>
 					<li class="selected">
 						<a href="login.php">login</a>
@@ -56,9 +57,22 @@
             if (($name=="")||($pass=="")){
 		        echo "All fields are required, please fill <a href=\"\">the form</a> again.";
 	        }else{
-                echo "test";
-            }
-        }
+				if (compareLogin($name, $pass)){
+					$_SESSION['loggedin'] = true;
+					$_SESSION['username'] = $name;
+					$_SESSION['ID'] = getID($name);
+					$userID = $_SESSION['ID'];
+					$_SESSION['authlevel'] = getAuthLevel($name);
+					if($_SESSION['authlevel'] == 1){
+						echo exec("python userData.py $userID");
+						header("location:performance.php?uid=".$_SESSION['ID']);
+					}else{
+						echo exec("python adminData.py");
+						header("location:admin.php");
+					}
+				}
+			}
+		}
         ?>
 </body>
 </html>
