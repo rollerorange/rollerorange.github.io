@@ -26,4 +26,18 @@ function checkAccountAccess($userID)
         return TRUE;
     }
 }
+
+function checkLoggedIn()
+{
+    $result = (isset($_SESSION['loggedin']) && $_SESSION['loggedin']);
+
+    if(!$result)
+    {
+        return FALSE;
+    }
+    else
+    {
+        return TRUE;
+    }
+}
 ?>

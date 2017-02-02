@@ -26,13 +26,13 @@ if(!checkAdminAccess()){
 							<a href="index.html">home</a>
 						</li>
 						<li>
-							<a href="about.html">about</a>
+							<a href="about.html">over</a>
 						</li>
 						<li>
-							<a href="schedules.html">class schedules</a>
+							<a href="schedules.html">openingstijden</a>
 						</li>
 						<li>
-							<a href="performance.php">performances</a>
+							<a href="performance.php">prestatie</a>
 						</li>
 						<li>
 							<a href="login.php">login</a>
@@ -59,13 +59,13 @@ if(!checkAdminAccess()){
 								<a href="index.html">Home</a>
 							</li>
 							<li>
-								<a href="about.html">About</a>
+								<a href="about.html">Over</a>
 							</li>
 							<li>
-								<a href="schedules.html">Class Schedules</a>
+								<a href="schedules.html">Openingstijden</a>
 							</li>
 							<li>
-								<a href="performance.php">Performances</a>
+								<a href="performance.php">Prestatie</a>
 							</li>
 							<li>
 								<a href="login.php">Login</a>
